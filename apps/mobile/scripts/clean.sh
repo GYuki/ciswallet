@@ -5,10 +5,10 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
 
 ROOT=${DIR//\/packages\/mobile\/scripts/}
 
-watchman watch-del "${ROOT}" ; watchman watch-project "${ROOT}"
+# watchman watch-del "${ROOT}" ; watchman watch-project "${ROOT}"
 
 cd "$DIR/../ios"
-xcodebuild clean | true
+# xcodebuild clean | true
 
 rm -rf "$DIR/../ios/Pods"
 

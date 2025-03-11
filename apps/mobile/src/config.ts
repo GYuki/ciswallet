@@ -4,12 +4,69 @@ import {ChainInfo} from '@keplr-wallet/types';
 export const EmbedChainInfos: ChainInfo[] = [
   {
     rpc: 'https://rpc-cosmoshub.keplr.app',
+    // rpc: 'http://localhost:26657',
     rest: 'https://lcd-cosmoshub.keplr.app',
+    // rest: 'http://localhost:1317',
     chainId: 'cosmoshub-4',
+    // chainId: 'demo',
     chainName: 'Cosmos Hub',
     stakeCurrency: {
       coinDenom: 'ATOM',
       coinMinimalDenom: 'uatom',
+      coinDecimals: 6,
+      coinGeckoId: 'cosmos',
+    },
+    walletUrl:
+      process.env.NODE_ENV === 'production'
+        ? 'https://wallet.keplr.app/chains/cosmos-hub'
+        // : 'http://localhost:8080/chains/cosmos-hub',
+        : 'https://wallet.keplr.app/chains/cosmos-hub',
+    walletUrlForStaking:
+      process.env.NODE_ENV === 'production'
+        ? 'https://wallet.keplr.app/chains/cosmos-hub'
+        : 'https://wallet.keplr.app/chains/cosmos-hub',
+        // : 'http://localhost:8080/chains/cosmos-hub',
+    bip44: {
+      coinType: 118,
+    },
+    bech32Config: Bech32Address.defaultBech32Config('cosmos'),
+    // bech32Config: {
+    //   bech32PrefixAccAddr: 'mini',
+    //   bech32PrefixAccPub: 'minipub',
+    //   bech32PrefixValAddr: 'minicncl',
+    //   bech32PrefixValPub: 'minicnclpub',
+    //   bech32PrefixConsAddr: 'minicnclcons',
+    //   bech32PrefixConsPub: 'minicnclconspub',
+    // },
+    currencies: [
+      {
+        coinDenom: 'ATOM',
+        coinMinimalDenom: 'uatom',
+        coinDecimals: 6,
+        coinGeckoId: 'cosmos',
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: 'ATOM',
+        coinMinimalDenom: 'uatom',
+        coinDecimals: 6,
+        coinGeckoId: 'cosmos',
+      },
+    ],
+    features: ['ibc-transfer', 'ibc-go'],
+  },
+  {
+    // rpc: 'https://rpc-cosmoshub.keplr.app',
+    rpc: 'http://localhost:26657',
+    // rest: 'https://lcd-cosmoshub.keplr.app',
+    rest: 'http://localhost:1317',
+    // chainId: 'cosmoshub-4',
+    chainId: 'demo',
+    chainName: 'Demo Hub',
+    stakeCurrency: {
+      coinDenom: 'mini',
+      coinMinimalDenom: 'umini',
       coinDecimals: 6,
       coinGeckoId: 'cosmos',
     },
@@ -24,19 +81,27 @@ export const EmbedChainInfos: ChainInfo[] = [
     bip44: {
       coinType: 118,
     },
-    bech32Config: Bech32Address.defaultBech32Config('cosmos'),
+    // bech32Config: Bech32Address.defaultBech32Config('cosmos'),
+    bech32Config: {
+      bech32PrefixAccAddr: 'mini',
+      bech32PrefixAccPub: 'minipub',
+      bech32PrefixValAddr: 'minivaloper',
+      bech32PrefixValPub: 'minivaloperpub',
+      bech32PrefixConsAddr: 'minivalcons',
+      bech32PrefixConsPub: 'minivalconspub',
+    },
     currencies: [
       {
-        coinDenom: 'ATOM',
-        coinMinimalDenom: 'uatom',
+        coinDenom: 'mini',
+        coinMinimalDenom: 'mini',
         coinDecimals: 6,
         coinGeckoId: 'cosmos',
       },
     ],
     feeCurrencies: [
       {
-        coinDenom: 'ATOM',
-        coinMinimalDenom: 'uatom',
+        coinDenom: 'mini',
+        coinMinimalDenom: 'umini',
         coinDecimals: 6,
         coinGeckoId: 'cosmos',
       },

@@ -10,7 +10,8 @@ const fs = require("fs");
 
 const isBuildManifestV2 = process.env.BUILD_MANIFEST_V2 === "true";
 
-const isEnvDevelopment = process.env.NODE_ENV !== "production";
+//const isEnvDevelopment = process.env.NODE_ENV !== "production";
+const isEnvDevelopment = true;
 const isDisableSplitChunks = process.env.DISABLE_SPLIT_CHUNKS === "true";
 const isEnvAnalyzer = process.env.ANALYZER === "true";
 const commonResolve = (dir) => ({
@@ -53,7 +54,8 @@ module.exports = {
   name: "extension",
   mode: isEnvDevelopment ? "development" : "production",
   // In development environment, turn on source map.
-  devtool: isEnvDevelopment ? "cheap-source-map" : false,
+//  devtool: isEnvDevelopment ? "cheap-source-map" : false,
+   devtool: "inline-source-map",
   // In development environment, webpack watch the file changes, and recompile
   watch: isEnvDevelopment,
   entry: {
@@ -137,6 +139,8 @@ module.exports = {
       stream: require.resolve("stream-browserify"),
       process: require.resolve("process/browser"),
       zlib: require.resolve("browserify-zlib"),
+      querystring: require.resolve("querystring-es3"),
+      vm: require.resolve("vm-browserify")
     },
   },
   module: {
@@ -147,6 +151,10 @@ module.exports = {
         test: /\.m?js/,
         resolve: {
           fullySpecified: false,
+          fallback: {
+            querystring: require.resolve("querystring-es3"),
+            vm: require.resolve("vm-browserify")
+          }
         },
       },
       {

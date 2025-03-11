@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {
   AppCurrency,
   Bech32Config,

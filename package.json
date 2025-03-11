@@ -90,13 +90,11 @@
     "node-gyp": "^9.3.1",
     "pre-commit": "^1.2.2",
     "prettier": "^2.8.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-is": "18.2.0",
+    "react-is": "^18.3.1",
     "semver": "^7.6.0",
     "starknet": "=6.11.0",
     "ts-jest": "^29.0.5",
-    "typescript": "5.0.4",
+    "typescript": "5.7.3",
     "zx": "^4.2.0"
   },
   "resolutions": {
@@ -109,5 +107,17 @@
     "libsodium-wrappers": "file:./etc/noop",
     "react-is": "^18.2.0"
   },
-  "packageManager": "yarn@3.4.1"
+  "packageManager": "yarn@3.4.1",
+  "dependencies": {
+    "acorn": "^8.14.0",
+    "protoc-gen-ts": "^0.8.7",
+    "querystring-es3": "^0.2.1",
+    "react-test-renderer": "18.3.1",
+    "ts-proto": "^2.6.1",
+    "vm-browserify": "^1.1.2"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17 || ^18",
+    "react-dom": "^16.8.0 || ^17 || ^18"
+  }
 }

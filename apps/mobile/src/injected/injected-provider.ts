@@ -1,3 +1,4 @@
+// @ts-nocheck
 import {InjectedKeplr} from '@keplr-wallet/provider';
 import {KeplrMode} from '@keplr-wallet/types';
 

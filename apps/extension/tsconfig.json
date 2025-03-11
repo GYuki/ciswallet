@@ -8,7 +8,8 @@
       "./node_modules/@types",
       "../../node_modules/@types",
       "./@types"
-    ]
+    ],
+    "lib": ["ESNext", "DOM", "WebWorker", "dom.iterable"],
   },
   "include": ["src/**/*"]
 }

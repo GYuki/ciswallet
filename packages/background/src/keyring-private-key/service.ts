@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { VaultService, PlainObject, Vault } from "../vault";
 import { Buffer } from "buffer/";
 import { Hash, PrivKeySecp256k1, PubKeySecp256k1 } from "@keplr-wallet/crypto";

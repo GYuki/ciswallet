@@ -41,6 +41,7 @@ import {
   ICNSInfo,
   CoinGeckoAPIEndPoint,
   CoinGeckoGetPrice,
+  CoinGeckoCoinDataByTokenAddress,
   FiatCurrencies,
   TokenContractListURL,
   EthereumEndpoint,
@@ -197,7 +198,10 @@ export class RootStore {
       }),
       CosmosGovernanceQueries.use(),
       CosmosGovernanceQueriesV1.use(),
-      EthereumQueries.use(),
+      EthereumQueries.use({
+        coingeckoAPIBaseURL: CoinGeckoAPIEndPoint,
+        coingeckoAPIURI: CoinGeckoCoinDataByTokenAddress,
+      }),
     );
 
     this.swapUsageQueries = new SwapUsageQueries(
@@ -208,7 +212,7 @@ export class RootStore {
       this.queriesStore.sharedContext,
       this.chainStore,
       this.swapUsageQueries,
-      SwapVenue,
+      [SwapVenue],
     );
 
     this.accountStore = new AccountStore(

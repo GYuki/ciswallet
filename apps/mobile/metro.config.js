@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const currentPath = __dirname;
 const rootPath = (() => {
-  const i = currentPath.lastIndexOf('/apps/mobile');
+  const i = currentPath.lastIndexOf('\\apps\\mobile');
   if (i < 0) {
     throw new Error('Could not find apps/mobile in path');
   }
@@ -112,6 +112,50 @@ const config = {
         }
         return res;
       })(),
+    },
+    resolveRequest: (context, moduleName, platform) => {
+      try {
+        return context.resolveRequest(context, moduleName, platform);
+      } catch (error) {
+        console.warn('\n context.resolveRequest cannot resolve: ', moduleName);
+      }
+
+      try {
+        const resolution = require.resolve(moduleName, {
+          paths: [path.dirname(context.originModulePath), ...config.resolver.nodeModulesPaths],
+        });
+
+        if (path.isAbsolute(resolution)) {
+          return {
+            filePath: resolution,
+            type: "sourceFile",
+          };
+        }
+      } catch (error) {
+        console.warn('\n require.resolve cannot resolve: ', moduleName);
+      }
+
+      try {
+        return defaultModuleResolver(context, moduleName, platform);
+      } catch (error) {
+        console.warn('\n defaultModuleResolver cannot resolve: ', moduleName);
+      }
+
+      try {
+        return {
+          filePath: require.resolve(moduleName),
+          type: "sourceFile",
+        };
+      } catch (error) {
+        console.warn('\n require.resolve cannot resolve: ', moduleName);
+      }
+
+      try {
+        const resolution = getDefaultConfig(require.resolve(moduleName)).resolver?.resolveRequest
+        return resolution(context, moduleName, platform);
+      } catch (error) {
+        console.warn('\n getDefaultConfig cannot resolve: ', moduleName);
+      }
     },
   },
 };

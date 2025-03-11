@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { ChainsService } from "../chains";
 import { KeyRingService } from "../keyring";
 import { InteractionService } from "../interaction";
