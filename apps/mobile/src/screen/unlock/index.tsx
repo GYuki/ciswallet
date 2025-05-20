@@ -6,6 +6,8 @@ import {useStyle} from '../../styles';
 import {RouteProp, useNavigation, useRoute} from '@react-navigation/native';
 import {IAccountStore, IChainStore, WalletStatus} from '@keplr-wallet/stores';
 import {autorun} from 'mobx';
+import { Image } from 'react-native';
+// ...existing code...
 import {RootStackParamList, StackNavProp} from '../../navigation';
 import {Keyboard, Platform, Text} from 'react-native';
 import {Box} from '../../components/box';
@@ -292,12 +294,13 @@ export const UnlockScreen: FunctionComponent = observer(() => {
           <Box style={{flex: 1}} />
 
           <Box alignX="center">
-            <LottieView
-              source={require('../../public/assets/lottie/wallet/logo.json')}
-              style={{width: 200, height: 155}}
-              autoPlay={keyRingStore.needMigration}
-              loop={keyRingStore.needMigration}
-            />
+          
+              <Image
+                source={require('../../public/assets/lottie/wallet/logo.png')}
+                style={{width: 150, height: 125, marginBottom: 25}}
+                resizeMode="contain"
+              />
+             
 
             {keyRingStore.needMigration ? (
               <React.Fragment>
@@ -376,14 +379,14 @@ export const UnlockScreen: FunctionComponent = observer(() => {
             style={{
               opacity: isReady ? 1 : 0,
             }}>
-            <TextButton
+            {/* <TextButton
               color="faint"
               text={intl.formatMessage({
                 id: 'page.unlock.need-help-button',
               })}
               size="large"
               onPress={() => setIsOpenHelpModal(true)}
-            />
+            /> */}
 
             <Gutter size={32} />
           </Box>

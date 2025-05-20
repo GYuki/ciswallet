@@ -58,10 +58,10 @@ export const TextInput = forwardRef<
 
     const disableStyle = [
       'background-color-gray-650',
-      'border-color-gray-400',
+      'border-color-red-400',
     ] as const;
 
-    const iconColor = 'color-gray-400';
+    const iconColor = 'color-blue-400';
 
     return (
       <Box style={StyleSheet.flatten([containerStyle])}>
@@ -76,7 +76,7 @@ export const TextInput = forwardRef<
           borderRadius={8}
           position="relative"
           style={style.flatten(
-            ['background-color-gray-700', ...inputBorderColor],
+            ['background-color-gray', ...inputBorderColor],
             [...(disabled ? disableStyle : [])],
           )}>
           <Columns sum={1}>
@@ -125,7 +125,7 @@ export const TextInput = forwardRef<
                     onBlur(e);
                   }
                 }}
-                placeholderTextColor={style.get('color-gray-400').color}
+                placeholderTextColor={style.get('color-blue-400').color}
                 ref={ref}
                 autoComplete={autoComplete || 'off'}
                 {...props}

@@ -25,7 +25,7 @@ export const NeedHelpModal = registerCardModal(() => {
       <Gutter size={12} />
 
       <Chip
-        text={`Keplr version: ${CODEPUSH_VERSION || APP_VERSION}`}
+        text={`Sayf version: ${CODEPUSH_VERSION || APP_VERSION}`}
         textStyle={{color: style.get('color-text-high').color}}
         backgroundStyle={style.flatten(['padding-x-12', 'padding-y-6'])}
       />

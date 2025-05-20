@@ -37,7 +37,7 @@ export const Checkbox: FunctionComponent<CheckboxProps> = ({
 
   const backgroundColor = (() => {
     if (checked) {
-      return ['background-color-blue-400'];
+      return ['background-color-green-400'];
     }
     return ['background-color-gray-400'];
   })();

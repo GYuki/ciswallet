@@ -51,11 +51,11 @@
           <action android:name="android.intent.action.VIEW"/>
           <category android:name="android.intent.category.DEFAULT"/>
           <category android:name="android.intent.category.BROWSABLE"/>
-          <data android:scheme="keplrwallet" android:host="wcV1"/>
-          <data android:scheme="keplrwallet" android:host="wcV2"/>
-          <data android:scheme="keplrwallet" android:host="staking"/>
-          <data android:scheme="keplrwallet" android:host="web-browser"/>
-          <data android:scheme="keplrwallet" android:host="show-address"/>
+          <data android:scheme="Sayfwallet" android:host="wcV1"/>
+          <data android:scheme="Sayfwallet" android:host="wcV2"/>
+          <data android:scheme="Sayfwallet" android:host="staking"/>
+          <data android:scheme="Sayfwallet" android:host="web-browser"/>
+          <data android:scheme="Sayfwallet" android:host="show-address"/>
         </intent-filter>
         <intent-filter android:autoVerify="true">
           <action android:name="android.intent.action.VIEW" />

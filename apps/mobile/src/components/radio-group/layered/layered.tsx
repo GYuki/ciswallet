@@ -71,7 +71,7 @@ export const LayeredHorizontalRadioGroup: FunctionComponent<
             'flex-row',
             'items-center',
             'justify-center',
-            'background-color-gray-600',
+            'background-color-gray',
           ]),
           containerStyleProp,
           containerStyle,
@@ -82,12 +82,12 @@ export const LayeredHorizontalRadioGroup: FunctionComponent<
             switch (size) {
               case 'large':
                 if (selected) {
-                  return ['subtitle3', 'color-white'];
+                  return ['subtitle3', 'color-dark'];
                 }
-                return ['body2', 'color-gray-300'];
+                return ['body2', 'color-blue-400'];
               default:
                 if (selected) {
-                  return ['text-caption1', 'color-white'];
+                  return ['text-caption1', 'color-dark'];
                 }
                 return ['text-caption2', 'color-gray-300'];
             }
@@ -105,8 +105,8 @@ export const LayeredHorizontalRadioGroup: FunctionComponent<
                     ['flex-row', 'items-center', 'justify-center'],
                     [
                       selected
-                        ? 'background-color-gray-400'
-                        : 'background-color-gray-600',
+                        ? 'background-color-blue-400'
+                        : 'background-color-gray',
                     ],
                   ),
                   itemStyle,

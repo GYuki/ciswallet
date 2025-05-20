@@ -82,11 +82,12 @@ export const Button: FunctionComponent<{
     switch (color) {
       case 'danger':
         return ['color-red-400'];
-      case 'primary':
+      
+      case 'secondary':
         return ['color-white', 'light:color-blue-400'];
       //default는 기본적으로 primary 색상으로 적용 primary랑 secondary는 같은 색이라서 해당 색으로 적용
       default:
-        return ['color-white'];
+        return ['color-black'];
     }
   })();
 

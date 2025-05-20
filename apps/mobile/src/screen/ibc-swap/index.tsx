@@ -239,7 +239,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
       // 일단 swap-1로 설정한다.
       if (
         ibcSwapConfigs.amountConfig.chainInfo.chainIdentifier ===
-        chainStore.getChain(skipQueriesStore.queryIBCSwap.swapVenue.chainId)
+        chainStore.getChain(skipQueriesStore.queryIBCSwap.swapVenues[0].chainId)
           .chainIdentifier
       ) {
         type = 'swap-1';
@@ -253,7 +253,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
           const firstOperation = queryRoute.response.data.operations[0];
           if ('swap' in firstOperation) {
             if ('swap_in' in firstOperation.swap) {
-              type = `swap-${firstOperation.swap.swap_in.swap_operations.length}`;
+              type = `swap-${firstOperation.swap.swap_in?.swap_operations.length}`;
             }
           }
         }
@@ -1014,7 +1014,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
       <Gutter size={12} />
 
       <YAxis alignX="center">
-        <TouchableWithoutFeedback
+        {/* <TouchableWithoutFeedback
           style={{paddingVertical: 8, paddingHorizontal: 16}}
           onPress={() => {
             Linking.openURL(TermsOfUseUrl);
@@ -1022,7 +1022,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
           <Text style={style.flatten(['text-button1', 'color-gray-300'])}>
             <FormattedMessage id="page.ibc-swap.button.terms-of-use.title" />
           </Text>
-        </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback> */}
       </YAxis>
 
       <SlippageModal

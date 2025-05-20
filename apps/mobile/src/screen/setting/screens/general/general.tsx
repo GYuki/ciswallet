@@ -81,23 +81,7 @@ export const SettingGeneralScreen: FunctionComponent = observer(() => {
             }
           />
 
-          <PageButton
-            title={intl.formatMessage({
-              id: 'page.setting.general.manage-non-native-chains-title',
-            })}
-            paragraph={intl.formatMessage({
-              id: 'page.setting.general.manage-non-native-chains-paragraph',
-            })}
-            endIcon={
-              <ArrowRightIcon
-                size={24}
-                color={style.get('color-text-low').color}
-              />
-            }
-            onClick={() =>
-              navigate.navigate('Setting.General.ManageNonActiveChains')
-            }
-          />
+          {/*   */}
 
           <PageButton
             title={intl.formatMessage({

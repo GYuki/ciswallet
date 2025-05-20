@@ -7,8 +7,9 @@ import React, {
   useState,
 } from 'react';
 import {IntlProvider} from 'react-intl';
-import MessagesEn from './en.json';
+import MessagesEn from './en2.json';
 import MessagesKo from './ko.json';
+import MessagesRu from './ru.json';
 import {useStore} from '../stores';
 import {observer} from 'mobx-react-lite';
 import {I18nManager, Platform, Settings} from 'react-native';
@@ -21,6 +22,7 @@ export type IntlMessages = {
 const messages: IntlMessages = {
   en: MessagesEn,
   ko: MessagesKo,
+  ru: MessagesRu,
 };
 
 const getMessages = (language: string): IntlMessage => {
@@ -37,12 +39,14 @@ interface Language {
 }
 
 const defaultLangMap: Record<string, string> = {
+  ru: 'ru',
   ko: 'ko',
   en: 'en',
 };
 
 const initLanguage = (): string => {
   let language = 'en';
+  
 
   if (Platform.OS === 'ios') {
     const settings = Settings.get('AppleLocale');
@@ -108,6 +112,8 @@ export const AppIntlProvider: FunctionComponent<PropsWithChildren> = observer(
       switch (language) {
         case 'ko':
           return '한국어';
+        case 'ru':
+          return 'Русский';
         default:
           return 'English';
       }

@@ -389,7 +389,7 @@ const CopyAddressItem: FunctionComponent<{
                       color={(() => {
                         if (isBookmarked) {
                           if (!blockInteraction && isBookmarkPress) {
-                            return style.get('color-blue-500').color;
+                            return style.get('color-blue-400').color;
                           }
                           return style.get('color-blue-400').color;
                         }
@@ -398,7 +398,7 @@ const CopyAddressItem: FunctionComponent<{
                           return style.get('color-gray-400').color;
                         }
 
-                        return style.get('color-gray-300').color;
+                        return style.get('color-gray-005').color;
                       })()}
                     />
                   </Box>

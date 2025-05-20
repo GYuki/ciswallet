@@ -22,6 +22,7 @@ import {defaultSpringConfig} from '../../../styles/spring';
 import {ViewRegisterContainer} from '../components/view-register-container';
 import {Buffer} from 'buffer/';
 import {FormattedMessage} from 'react-intl';
+import { Image } from 'react-native';
 
 const SimpleProgressBar: FunctionComponent<{
   progress: number;
@@ -399,6 +400,12 @@ export const FinalizeKeyScreen: FunctionComponent = observer(() => {
         autoPlay={true}
         style={{width: '80%', aspectRatio: 1}}
       />
+      {/* <Image 
+        source={require('../../../public/assets/lottie/register/creating.gif')}
+        style={{height: "40%", aspectRatio: 1}}
+        
+        
+      /> */}
       <View
         style={{
           flex: 2,

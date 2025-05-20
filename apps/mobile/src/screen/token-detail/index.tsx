@@ -115,28 +115,28 @@ export const TokenDetailScreen: FunctionComponent = observer(() => {
       },
       disabled: isIBCCurrency,
     },
-    {
-      icon: (
-        <MessageSwapIcon size={44} color={style.get('color-white').color} />
-      ),
-      text: 'Swap',
-      onClick: () => {
-        navigation.navigate({
-          name: 'Swap',
-          params: {
-            chainId: chainId,
-            coinMinimalDenom: coinMinimalDenom,
-            outChainId: chainStore.getChain('noble').chainId,
-            outCoinMinimalDenom: 'uusdc',
-          },
-          merge: true,
-        });
-      },
-      disabled: !skipQueriesStore.queryIBCSwap.isSwappableCurrency(
-        chainId,
-        currency,
-      ),
-    },
+    // {
+    //   icon: (
+    //     <MessageSwapIcon size={44} color={style.get('color-white').color} />
+    //   ),
+    //   text: 'Swap',
+    //   onClick: () => {
+    //     navigation.navigate({
+    //       name: 'Swap',
+    //       params: {
+    //         chainId: chainId,
+    //         coinMinimalDenom: coinMinimalDenom,
+    //         outChainId: chainStore.getChain('noble').chainId,
+    //         outCoinMinimalDenom: 'uusdc',
+    //       },
+    //       merge: true,
+    //     });
+    //   },
+    //   disabled: !skipQueriesStore.queryIBCSwap.isSwappableCurrency(
+    //     chainId,
+    //     currency,
+    //   ),
+    // },
     {
       icon: (
         <MessageSendIcon size={44} color={style.get('color-white').color} />

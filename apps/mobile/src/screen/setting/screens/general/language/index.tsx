@@ -52,6 +52,21 @@ export const SettingGeneralLanguageScreen: FunctionComponent = observer(() => {
           }}
         />
         <PageButton
+          title={language.getLanguageFullName('ru')}
+          endIcon={
+            !language.automatic && language.language === 'ru' ? (
+              <CheckIcon
+                size={20}
+                color={style.get('color-text-middle').color}
+              />
+            ) : null
+          }
+          onClick={() => {
+            language.setLanguage('ru');
+            navigate.goBack();
+          }}
+        />
+        <PageButton
           title={language.getLanguageFullName('ko')}
           endIcon={
             !language.automatic && language.language === 'ko' ? (

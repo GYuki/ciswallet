@@ -58,7 +58,7 @@ export const SettingScreen: FunctionComponent = () => {
             onClick={() => navigate.navigate('Setting.SecurityAndPrivacy')}
           />
 
-          <PageButton
+          {/* <PageButton
             title={intl.formatMessage({
               id: 'page.setting.manage-token-list-title',
             })}
@@ -72,7 +72,7 @@ export const SettingScreen: FunctionComponent = () => {
               />
             }
             onClick={() => navigate.navigate('Setting.ManageTokenList')}
-          />
+          /> */}
         </Stack>
       </Box>
     </PageWithScrollView>

@@ -8,18 +8,13 @@ import {Button} from '../../../components/button';
 import {TextButton} from '../../../components/text-button';
 import {StackActions, useNavigation} from '@react-navigation/native';
 import {OptionContainer} from '../components';
-import {
-  AppleIcon,
-  GoogleIcon,
-  BoltIcon,
-  ShieldIcon,
-} from '../../../components/icon';
+import {ShieldIcon} from '../../../components/icon';
 import {StackNavProp} from '../../../navigation';
 import {ScrollViewRegisterContainer} from '../components/scroll-view-register-container';
-import {
-  isAppleSignInEnabled,
-  isGoogleSignInEnabled,
-} from 'keplr-wallet-mobile-private';
+// import {
+//   isAppleSignInEnabled,
+//   isGoogleSignInEnabled,
+// } from 'keplr-wallet-mobile-private';
 
 export const RegisterIntroNewUserScreen: FunctionComponent = () => {
   const intl = useIntl();
@@ -89,7 +84,7 @@ export const RegisterIntroNewUserScreen: FunctionComponent = () => {
 
       <Gutter size={16} />
 
-      <OptionContainer
+      {/* <OptionContainer
         title={intl.formatMessage({
           id: 'pages.register.intro-new-user.sign-up-social-title',
         })}
@@ -143,7 +138,7 @@ export const RegisterIntroNewUserScreen: FunctionComponent = () => {
             navigation.navigate('Register.GoogleSignIn', {});
           }}
         />
-      </OptionContainer>
+      </OptionContainer> */}
 
       <Gutter size={16} />
     </ScrollViewRegisterContainer>

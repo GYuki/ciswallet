@@ -41,7 +41,7 @@ export const Toggle: FunctionComponent<ToggleProps> = ({
           disabled
             ? style.get('color-gray-500').color
             : isOpen
-            ? style.get('color-blue-400').color
+            ? style.get('color-green-400').color
             : style.get('color-gray-400').color
         }
         style={containerStyle}>
@@ -70,7 +70,7 @@ export const Toggle: FunctionComponent<ToggleProps> = ({
               color={
                 disabled
                   ? style.get('color-gray-200').color
-                  : style.get('color-blue-400').color
+                  : style.get('color-black').color
               }
             />
           ) : null}

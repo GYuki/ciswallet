@@ -37,7 +37,7 @@ import {Skeleton} from '../../components/skeleton';
 import {StakingIcon} from '../../components/icon/stacking';
 import {VoteIcon} from '../../components/icon';
 import {useIntl} from 'react-intl';
-import {AppUpdateTopLabel} from './app-update';
+// import {AppUpdateTopLabel} from './app-update';
 import {DualChart} from './components/chart';
 import {IbcHistoryView} from './components/ibc-history-view';
 import {
@@ -236,7 +236,7 @@ export const HomeScreen: FunctionComponent = observer(() => {
         )
       }>
       <Stack gutter={12}>
-        <AppUpdateTopLabel isNotReady={isNotReady} />
+        {/* <AppUpdateTopLabel isNotReady={isNotReady} /> */}
         <Gutter size={0} />
 
         <YAxis alignX="center">
@@ -271,7 +271,7 @@ export const HomeScreen: FunctionComponent = observer(() => {
             second={{
               weight: stakedChartWeight,
             }}
-            highlight={tabStatus === 'available' ? 'first' : 'second'}
+            highlight={tabStatus === 'available' ? 'first' : 'first'}
             isNotReady={isNotReady}
           />
           <Box

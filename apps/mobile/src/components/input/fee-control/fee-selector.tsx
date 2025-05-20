@@ -41,7 +41,7 @@ export const FeeSelector: FunctionComponent<{
             backgroundColor={
               feeConfig.type === 'low'
                 ? style.get('color-blue-400').color
-                : style.get('color-gray-500').color
+                : style.get('color-gray').color
             }
             style={{
               borderTopLeftRadius: 8,
@@ -52,7 +52,7 @@ export const FeeSelector: FunctionComponent<{
             <Text
               style={style.flatten([
                 'h5',
-                feeConfig.type === 'low' ? 'color-gray-50' : 'color-gray-200',
+                feeConfig.type === 'low' ? 'color-dark' : 'color-blue-400',
               ])}>
               <FormattedMessage id="components.input.fee-control.modal.fee-selector.low" />
             </Text>
@@ -62,8 +62,8 @@ export const FeeSelector: FunctionComponent<{
                 style={style.flatten([
                   'text-caption2',
                   feeConfig.type === 'low'
-                    ? 'color-blue-200'
-                    : 'color-gray-300',
+                    ? 'color-dark'
+                    : 'color-blue-400',
                 ])}>
                 {priceStore
                   .calculatePrice(
@@ -79,7 +79,7 @@ export const FeeSelector: FunctionComponent<{
             <Text
               style={style.flatten([
                 'text-caption1',
-                feeConfig.type === 'low' ? 'color-blue-100' : 'color-gray-300',
+                feeConfig.type === 'low' ? 'color-dark' : 'color-blue-400',
               ])}>
               {feeConfig
                 .getFeeTypePrettyForFeeCurrency(feeCurrency, 'low')
@@ -108,14 +108,14 @@ export const FeeSelector: FunctionComponent<{
             backgroundColor={
               feeConfig.type === 'average'
                 ? style.get('color-blue-400').color
-                : style.get('color-gray-500').color
+                : style.get('color-gray').color
             }>
             <Text
               style={style.flatten([
                 'h5',
                 feeConfig.type === 'average'
-                  ? 'color-gray-50'
-                  : 'color-gray-200',
+                  ? 'color-dark'
+                  : 'color-blue-400',
               ])}>
               <FormattedMessage id="components.input.fee-control.modal.fee-selector.average" />
             </Text>
@@ -125,8 +125,8 @@ export const FeeSelector: FunctionComponent<{
                 style={style.flatten([
                   'text-caption2',
                   feeConfig.type === 'average'
-                    ? 'color-blue-200'
-                    : 'color-gray-300',
+                    ? 'color-dark'
+                    : 'color-blue-400',
                 ])}>
                 {priceStore
                   .calculatePrice(
@@ -143,8 +143,8 @@ export const FeeSelector: FunctionComponent<{
               style={style.flatten([
                 'text-caption1',
                 feeConfig.type === 'average'
-                  ? 'color-blue-100'
-                  : 'color-gray-300',
+                  ? 'color-dark'
+                  : 'color-blue-400',
               ])}>
               {feeConfig
                 .getFeeTypePrettyForFeeCurrency(feeCurrency, 'average')
@@ -173,7 +173,7 @@ export const FeeSelector: FunctionComponent<{
             backgroundColor={
               feeConfig.type === 'high'
                 ? style.get('color-blue-400').color
-                : style.get('color-gray-500').color
+                : style.get('color-gray').color
             }
             style={{
               borderTopRightRadius: 8,
@@ -184,7 +184,7 @@ export const FeeSelector: FunctionComponent<{
             <Text
               style={style.flatten([
                 'h5',
-                feeConfig.type === 'high' ? 'color-gray-50' : 'color-gray-200',
+                feeConfig.type === 'high' ? 'color-dark' : 'color-blue-400',
               ])}>
               <FormattedMessage id="components.input.fee-control.modal.fee-selector.high" />
             </Text>
@@ -194,8 +194,8 @@ export const FeeSelector: FunctionComponent<{
                 style={style.flatten([
                   'text-caption2',
                   feeConfig.type === 'high'
-                    ? 'color-blue-200'
-                    : 'color-gray-300',
+                    ? 'color-dark'
+                    : 'color-blue-400',
                 ])}>
                 {priceStore
                   .calculatePrice(
@@ -211,7 +211,7 @@ export const FeeSelector: FunctionComponent<{
             <Text
               style={style.flatten([
                 'text-caption1',
-                feeConfig.type === 'high' ? 'color-blue-100' : 'color-gray-300',
+                feeConfig.type === 'high' ? 'color-dark' : 'color-blue-400',
               ])}>
               {feeConfig
                 .getFeeTypePrettyForFeeCurrency(feeCurrency, 'high')

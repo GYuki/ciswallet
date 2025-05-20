@@ -22,7 +22,7 @@ export const SettingSecurityAndPrivacyScreen: FunctionComponent = observer(
       <React.Fragment>
         <Box paddingX={12} paddingTop={8}>
           <Stack gutter={8}>
-            <PageButton
+            {/* <PageButton
               title={intl.formatMessage({
                 id: 'page.setting.security.connected-websites-title',
               })}
@@ -38,8 +38,8 @@ export const SettingSecurityAndPrivacyScreen: FunctionComponent = observer(
               onClick={() =>
                 navigate.navigate('Setting.SecurityAndPrivacy.Permission')
               }
-            />
-            <PageButton
+            /> */}
+            {/* <PageButton
               title={intl.formatMessage({
                 id: 'page.setting.security.manage-WC-title',
               })}
@@ -54,7 +54,7 @@ export const SettingSecurityAndPrivacyScreen: FunctionComponent = observer(
                   'Setting.SecurityAndPrivacy.ManageWalletConnect',
                 )
               }
-            />
+            /> */}
             <PageButton
               title={intl.formatMessage({
                 id: 'page.setting.security.change-password-title',

@@ -288,7 +288,7 @@ export const AvailableTabView: FunctionComponent<{
             </React.Fragment>
           ) : null}
 
-          {isShowNotFound ? (
+          {/* {isShowNotFound ? (
             <Box marginY={16}>
               <EmptyView>
                 <Stack alignX="center" gutter={0.1}>
@@ -331,7 +331,7 @@ export const AvailableTabView: FunctionComponent<{
                 />
               }
             />
-          ) : null}
+          ) : null} */}
 
           {numFoundToken > 0 ? (
             <Box padding={12}>
