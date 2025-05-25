@@ -32,7 +32,7 @@ import {ArrowDownIcon} from '../../../../components/icon/arrow-down';
 import {ArrowUpIcon} from '../../../../components/icon/arrow-up';
 import {WarningIcon} from '../../../../components/icon/warning';
 import {useNavigation} from '@react-navigation/native';
-import {SpecialButton} from '../../../../components/special-button';
+// import {SpecialButton} from '../../../../components/special-button';
 import {useNotification} from '../../../../hooks/notification';
 import {StackNavProp} from '../../../../navigation';
 import {FormattedMessage, useIntl} from 'react-intl';
@@ -757,7 +757,7 @@ export const ClaimAll: FunctionComponent<{isNotReady?: boolean}> = observer(
                  ledger일 경우 특수한 행동을 하진 못하고 그냥 collapse를 펼치기만 한다.
                  특수한 기능이 없다는 것을 암시하기 위해서 ledger일때는 일반 버튼으로 처리한다.
                */}
-              {isLedger || isKeystone ? (
+              {/* {isLedger || isKeystone ? ( */}
                 <Button
                   text={intl.formatMessage({
                     id: 'page.main.components.claim-all.button',
@@ -767,7 +767,7 @@ export const ClaimAll: FunctionComponent<{isNotReady?: boolean}> = observer(
                   disabled={claimAllDisabled}
                   onPress={claimAll}
                 />
-              ) : (
+              {/* ) : (
                 <SpecialButton
                   size="medium"
                   text={intl.formatMessage({
@@ -777,7 +777,7 @@ export const ClaimAll: FunctionComponent<{isNotReady?: boolean}> = observer(
                   isLoading={claimAllIsLoading}
                   onPress={claimAll}
                 />
-              )}
+              )} */}
             </Skeleton>
           </Columns>
         </Box>

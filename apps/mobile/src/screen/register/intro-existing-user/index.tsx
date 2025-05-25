@@ -66,7 +66,7 @@ export const RegisterIntroExistingUserScene: FunctionComponent = () => {
 
       <Gutter size={16} />
 
-      <OptionContainer
+      {/* <OptionContainer
         title={intl.formatMessage({
           id: 'pages.register.intro-existing-user.social-recovery-title',
         })}
@@ -106,7 +106,7 @@ export const RegisterIntroExistingUserScene: FunctionComponent = () => {
             navigation.navigate('Register.GoogleSignIn', {});
           }}
         />
-      </OptionContainer>
+      </OptionContainer> */}
 
       <Gutter size={16} />
     </ScrollViewRegisterContainer>

@@ -575,18 +575,18 @@ const DrawerBottomTabLabel: FunctionComponent<{
           {intl.formatMessage({id: 'bottom-tabs.home'})}
         </Text>
       );
-    case 'Swap':
-      return (
-        <Text style={{color}}>
-          {intl.formatMessage({id: 'bottom-tabs.swap'})}
-        </Text>
-      );
-    case 'WebTab':
-      return (
-        <Text style={{color}}>
-          {intl.formatMessage({id: 'bottom-tabs.browser'})}
-        </Text>
-      );
+    // case 'Swap':
+    //   return (
+    //     <Text style={{color}}>
+    //       {intl.formatMessage({id: 'bottom-tabs.swap'})}
+    //     </Text>
+    //   );
+    // case 'WebTab':
+    //   return (
+    //     <Text style={{color}}>
+    //       {intl.formatMessage({id: 'bottom-tabs.browser'})}
+    //     </Text>
+    //   );
     case 'Settings':
       return (
         <Text style={{color}}>
@@ -639,10 +639,10 @@ export const MainTabNavigation: FunctionComponent = () => {
               ) : (
                 <HomeOutlinedIcon size={size} color={color} />
               );
-            case 'Swap':
-              return <SwapIcon size={size} color={color} />;
-            case 'WebTab':
-              return <BrowserIcon size={size} color={color} />;
+            // case 'Swap':
+            //   return <SwapIcon size={size} color={color} />;
+            // case 'WebTab':
+            //   return <BrowserIcon size={size} color={color} />;
             case 'Settings':
               return focused ? (
                 <SettingIcon size={size} color={color} />
@@ -678,19 +678,19 @@ export const MainTabNavigation: FunctionComponent = () => {
         }}
         component={HomeScreen}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Swap"
         options={{
           headerTitle: HomeScreenHeaderTitleFunc,
           ...homeHeaderOptions,
         }}
         component={IBCSwapScreen}
-      />
-      <Tab.Screen
+      /> */}
+      {/* <Tab.Screen
         name="WebTab"
         options={{headerShown: false}}
         component={WebNavigation}
-      />
+      /> */}
       <Tab.Screen
         name="Activities"
         options={{

@@ -1,5 +1,6 @@
 import React, {FunctionComponent} from 'react';
-import LottieView from 'lottie-react-native';
+// import LottieView from 'lottie-react-native';
+import { Image } from 'react-native';
 import {useStyle} from '../../../styles';
 import {Box} from '../../../components/box';
 import {Gutter} from '../../../components/gutter';
@@ -24,11 +25,16 @@ export const RegisterIntroScreen: FunctionComponent = () => {
         justifyContent: 'center',
         alignItems: 'center',
       }}>
-      <LottieView
+      {/* <LottieView
         source={require('../../../public/assets/lottie/wallet/logo.json')}
         style={{width: 200, height: 155}}
-      />
-
+      /> */}
+      <Image 
+        source={require('../../../public/assets/lottie/wallet/logo.png')}
+        style={{width: 150, height: 125, marginBottom: 25}}
+        resizeMode="contain"
+      
+      /> 
       <Gutter size={10} />
 
       <Text style={style.flatten(['mobile-h2', 'color-white'])}>
@@ -44,7 +50,7 @@ export const RegisterIntroScreen: FunctionComponent = () => {
           })}
           size="large"
           onPress={() => {
-            navigation.navigate('Register.Intro.NewUser');
+            navigation.navigate('Register.NewMnemonic');
           }}
         />
 
@@ -57,13 +63,13 @@ export const RegisterIntroScreen: FunctionComponent = () => {
           size="large"
           color="secondary"
           onPress={() => {
-            navigation.navigate('Register.Intro.ExistingUser');
+            navigation.navigate('Register.RecoverMnemonic');
           }}
         />
 
         <Gutter size={20} />
 
-        <TextButton
+        {/* <TextButton
           containerStyle={{height: 32}}
           size="large"
           text={intl.formatMessage({
@@ -72,7 +78,7 @@ export const RegisterIntroScreen: FunctionComponent = () => {
           onPress={() => {
             navigation.navigate('Register.Intro.ConnectHardware');
           }}
-        />
+        /> */}
       </Box>
     </ScrollViewRegisterContainer>
   );

@@ -18,13 +18,13 @@ function handleImageHighRes(image: any, highResImage: any): any {
   return image;
 }
 
-export const ColorPalette = {
+export const ColorPalette = { 
   'blue-10': '#F6F8FF',
   'blue-50': '#F0F3FF',
   'blue-100': '#E4E9FF',
   'blue-200': '#9DACF4',
   'blue-300': '#566FEC',
-  'blue-400': '#2C4BE2',
+  'blue-400': '#E3F4FF',
   'blue-500': '#1633C0',
   'blue-600': '#112377',
   'blue-700': '#09144D',
@@ -110,6 +110,10 @@ export const ColorPalette = {
   'gray-700': '#09090A',
 
   black: '#020202',
+  
+  'gray': '#303032',
+  "dark": "#080808",
+  'gray-005': '#3C3C3C',
 
   transparent: 'rgba(255,255,255,0)',
 };
@@ -833,3 +837,6 @@ export const {StyleProvider, useStyle, useStyleThemeController} =
       },
     },
   );
+
+
+

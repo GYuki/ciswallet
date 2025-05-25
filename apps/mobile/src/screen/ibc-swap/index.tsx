@@ -1014,7 +1014,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
       <Gutter size={12} />
 
       <YAxis alignX="center">
-        <TouchableWithoutFeedback
+        {/* <TouchableWithoutFeedback
           style={{paddingVertical: 8, paddingHorizontal: 16}}
           onPress={() => {
             Linking.openURL(TermsOfUseUrl);
@@ -1022,7 +1022,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
           <Text style={style.flatten(['text-button1', 'color-gray-300'])}>
             <FormattedMessage id="page.ibc-swap.button.terms-of-use.title" />
           </Text>
-        </TouchableWithoutFeedback>
+        </TouchableWithoutFeedback> */}
       </YAxis>
 
       <SlippageModal

@@ -94,11 +94,11 @@ export const DrawerContent: FunctionComponent = observer(() => {
               <FormattedMessage id="page.main.components.menu-bar.my-contacts-title" />
             </Text>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={onClickAddTokens}>
+          {/* <TouchableWithoutFeedback onPress={onClickAddTokens}>
             <Text style={style.flatten(['h3', 'color-white'])}>
               <FormattedMessage id="page.main.components.menu-bar.add-token-title" />
             </Text>
-          </TouchableWithoutFeedback>
+          </TouchableWithoutFeedback> */}
         </Stack>
       </Stack>
       <Stack gutter={32}>
@@ -107,7 +107,7 @@ export const DrawerContent: FunctionComponent = observer(() => {
             <FormattedMessage id="page.main.components.menu-bar.lock-wallet-title" />
           </Text>
         </TouchableWithoutFeedback>
-        <Box
+        {/* <Box
           width={40}
           height={1}
           backgroundColor={style.get('color-gray-400').color}
@@ -127,7 +127,7 @@ export const DrawerContent: FunctionComponent = observer(() => {
               <LinkIcon size={20} color={style.get('color-text-low').color} />
             </Columns>
           </TouchableWithoutFeedback>
-        </Stack>
+        </Stack> */}
       </Stack>
     </DrawerContentScrollView>
   );

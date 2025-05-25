@@ -88,7 +88,7 @@ export const Dropdown: FunctionComponent<DropdownProps> = ({
         <Box
           alignY="center"
           height={size === 'small' ? 44 : 52}
-          backgroundColor={style.get('color-gray-700').color}
+          backgroundColor={style.get('color-gray').color}
           paddingX={16}
           paddingY={10}
           borderRadius={8}

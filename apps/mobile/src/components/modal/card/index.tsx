@@ -210,6 +210,7 @@ export const CardModalBase: FunctionComponent<
         ) + keyboard.height.value,
 
       backgroundColor: backgroundColor,
+      borderRadius: 24,
     };
   });
 

@@ -236,12 +236,7 @@ export const AutoLockUnlockModal = registerModal(
             <Box style={{flex: 1}} />
 
             <Box alignX="center">
-              <LottieView
-                source={require('../../public/assets/lottie/wallet/logo.json')}
-                style={{width: 200, height: 155}}
-                autoPlay={keyRingStore.needMigration}
-                loop={keyRingStore.needMigration}
-              />
+              <img src={require('../../public/assets/lottie/wallet/logo.png')} alt="" />
 
               {keyRingStore.needMigration ? (
                 <React.Fragment>
