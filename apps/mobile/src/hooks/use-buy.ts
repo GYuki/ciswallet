@@ -15,11 +15,48 @@ export const useBuy = (selectedTokenInfo?: {
 
   useEffect(() => {
     (async () => {
-      const response = await simpleFetch<{list: FiatOnRampServiceInfo[]}>(
-        'https://raw.githubusercontent.com/chainapsis/keplr-fiat-on-off-ramp-registry/main/fiat-on-off-ramp-list.json',
-      );
+      // const response = await simpleFetch<{list: FiatOnRampServiceInfo[]}>(
+      //   'https://raw.githubusercontent.com/chainapsis/keplr-fiat-on-off-ramp-registry/main/fiat-on-off-ramp-list.json',
+      // );
 
-      setFiatOnRampServiceInfos(response.data.list);
+      // setFiatOnRampServiceInfos(response.data.list);
+      setFiatOnRampServiceInfos([
+        {
+          serviceId: 'kado',
+          serviceName: 'Kado',
+          buyOrigin: 'https://app.kado.money',
+          buySupportCoinDenomsByChainId: {
+            'osmosis-1': ['USDC'],
+            'juno-1': ['USDC'],
+            'phoenix-1': ['USDC'],
+            // 'cosmoshub-4': ['ATOM'],
+            'sayf': ['SAYF'],
+            'injective-1': ['USDT'],
+          },
+        },
+        {
+          serviceId: 'moonpay',
+          serviceName: 'Moonpay',
+          buyOrigin: 'https://buy.moonpay.com',
+          buySupportCoinDenomsByChainId: {
+            // 'cosmoshub-4': ['ATOM'],
+            'sayf': ['SAYF'],
+            'kava_2222-10': ['KAVA'],
+          },
+        },
+        {
+          serviceId: 'transak',
+          serviceName: 'Transak',
+          buyOrigin: 'https://global.transak.com',
+          buySupportCoinDenomsByChainId: {
+            'osmosis-1': ['OSMO'],
+            // 'cosmoshub-4': ['ATOM'],
+            'sayf': ['SAYF'],
+            'secret-4': ['SCRT'],
+            'injective-1': ['INJ'],
+          },
+        },
+      ]);
     })();
   }, []);
 

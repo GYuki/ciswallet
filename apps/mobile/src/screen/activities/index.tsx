@@ -109,9 +109,10 @@ export const ActivitiesScreen: FunctionComponent = observer(() => {
   otherBech32Addresses.setSupportedChainList(supportedChainList);
 
   const msgHistory = usePaginatedCursorQuery<ResMsgsHistory>(
-    process.env['KEPLR_EXT_TX_HISTORY_BASE_URL'] || '',
+    // process.env['KEPLR_EXT_TX_HISTORY_BASE_URL'] || '',
+    "http://127.0.0.1:8000",
     () => {
-      return `/history/msgs/keplr-multi-chain?baseBech32Address=${
+      return `/history/msgs/sayf/keplr-multi-chain?baseBech32Address=${
         account.bech32Address
       }&chainIdentifiers=${(() => {
         if (selectedKey === '__all__') {

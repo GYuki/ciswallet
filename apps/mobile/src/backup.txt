@@ -12,7 +12,7 @@ export const EmbedChainInfos: ChainInfo[] = [
     chainName: 'Sayf',
     stakeCurrency: {
       coinDenom: 'SAYF',
-      coinMinimalDenom: 'sayf',
+      coinMinimalDenom: 'usayf',
       coinDecimals: 6,
       coinGeckoId: 'cosmos',
     },
@@ -107,7 +107,7 @@ export const EmbedChainInfos: ChainInfo[] = [
       },
     ],
     features: ['ibc-transfer', 'ibc-go'],
-  },
+  }
   {
     rpc: 'https://rpc-osmosis.keplr.app',
     rest: 'https://lcd-osmosis.keplr.app',

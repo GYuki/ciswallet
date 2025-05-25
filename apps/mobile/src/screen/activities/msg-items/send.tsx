@@ -22,16 +22,20 @@ export const MsgRelationSend: FunctionComponent<{
 
   const sendAmountPretty = useMemo(() => {
     const currency = chainInfo.forceFindCurrency(targetDenom);
-
+    console.log("><<><><", msg)
     const amounts = (msg.msg as any)['amount'] as {
       denom: string;
       amount: string;
     }[];
 
+    console.log(">", targetDenom)
+
     const amt = amounts.find(amt => amt.denom === targetDenom);
     if (!amt) {
+      console.log('shit amt')
       return new CoinPretty(currency, '0');
     }
+    console.log("><<<>>>>>", currency, amt.amount)
     return new CoinPretty(currency, amt.amount);
   }, [chainInfo, msg.msg, targetDenom]);
 

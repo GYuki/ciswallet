@@ -55,7 +55,7 @@
     "buffer": "^6.0.3",
     "color": "^4.2.3",
     "delay": "^6.0.0",
-    "expo": "^50.0.7",
+    "expo": "~50.0.0",
     "expo-apple-authentication": "~6.3.0",
     "expo-clipboard": "^5.0.1",
     "expo-crypto": "^12.8.1",
@@ -129,7 +129,8 @@
     "browserify": "^17.0.0",
     "pod-install": "^0.2.0",
     "react-test-renderer": "18.3.1",
-    "tinyify": "^4.0.0"
+    "tinyify": "^4.0.0",
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=16"

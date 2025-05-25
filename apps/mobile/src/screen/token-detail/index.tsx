@@ -33,6 +33,7 @@ import {RenderMessages} from '../activities/messages.tsx';
 import {useBuy} from '../../hooks/use-buy.ts';
 import {IconProps} from '../../components/icon/types.ts';
 import {BuyModal} from '../home/buy-modal.tsx';
+import { Bech32Address } from '@keplr-wallet/cosmos';
 
 export const TokenDetailScreen: FunctionComponent = observer(() => {
   const {
@@ -83,6 +84,7 @@ export const TokenDetailScreen: FunctionComponent = observer(() => {
   );
 
   const isSupported: boolean = useMemo(() => {
+    return true
     const map = new Map<string, boolean>();
     for (const chainIdentifier of querySupported.response?.data ?? []) {
       map.set(chainIdentifier, true);
@@ -155,11 +157,10 @@ export const TokenDetailScreen: FunctionComponent = observer(() => {
   ];
 
   const msgHistory = usePaginatedCursorQuery<ResMsgsHistory>(
-    process.env['KEPLR_EXT_TX_HISTORY_BASE_URL'] || '',
+    // process.env['KEPLR_EXT_TX_HISTORY_BASE_URL'] || '',
+    "http://127.0.0.1:8000",
     () => {
-      return `/history/msgs/${chainInfo.chainIdentifier}/${
-        accountStore.getAccount(chainId).bech32Address
-      }?relations=${Relations.join(',')}&denoms=${encodeURIComponent(
+      return `/history/msgs/${"sayf"}/${accountStore.getAccount(chainId).bech32Address}?relations=${Relations.join(',')}&denoms=${encodeURIComponent(
         currency.coinMinimalDenom,
       )}&vsCurrencies=${priceStore.defaultVsCurrency}&limit=${PaginationLimit}`;
     },
@@ -439,6 +440,10 @@ export const TokenDetailScreen: FunctionComponent = observer(() => {
             </Box>
           );
         }
+
+        console.log(">><><<>", msgHistory.pages[0].response)
+        console.log(chainInfo.embedded.embedded)
+        console.log(msgHistory.pages[0].response?.isUnsupported)
 
         if (msgHistory.pages[0].response?.isUnsupported || !isSupported) {
           if (chainInfo.embedded.embedded) {

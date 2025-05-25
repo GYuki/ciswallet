@@ -57,6 +57,7 @@ export const usePaginatedCursorQuery = <R>(
       const querySeq = currentQuerySeq.current;
       simpleFetch<R>(baseURLRef.current, initialUriFnRef.current())
         .then(r => {
+          console.log(r.data)
           if (querySeq === currentQuerySeq.current) {
             setPages([
               {

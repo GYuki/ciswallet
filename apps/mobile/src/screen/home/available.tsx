@@ -55,6 +55,10 @@ export const AvailableTabView: FunctionComponent<{
   const navigation = useNavigation<StackNavProp>();
 
   const allBalances = hugeQueriesStore.getAllBalances(true);
+
+  console.log('>>>', allBalances)
+  // console.log('>>>', allBalances[0].token.toCoin())
+
   const allBalancesNonZero = useMemo(() => {
     return allBalances.filter(token => {
       return token.token.toDec().gt(zeroDec);

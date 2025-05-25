@@ -582,7 +582,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = SZTB68DXM4;
+				DEVELOPMENT_TEAM = SZPLVMT34X;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = keplrmobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,7 +596,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chainapsis.keplrwallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makhach.sayfwallet;
 				PRODUCT_NAME = keplrmobile;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -615,7 +615,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 33;
-				DEVELOPMENT_TEAM = SZTB68DXM4;
+				DEVELOPMENT_TEAM = SZPLVMT34X;
 				INFOPLIST_FILE = keplrmobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -628,7 +628,7 @@
 					"-lc++",
 				);
 				OTHER_SWIFT_FLAGS = "$(inherited) -D EXPO_CONFIGURATION_RELEASE";
-				PRODUCT_BUNDLE_IDENTIFIER = com.chainapsis.keplrwallet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.makhach.sayfwallet;
 				PRODUCT_NAME = keplrmobile;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

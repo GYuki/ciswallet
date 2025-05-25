@@ -39,26 +39,31 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>CodePushDeploymentKey</key>
 	<string>y_oh1EPXmQ7mMKNB13bAw3cxE9cvw2wY6YlUG</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
-		    <!-- Do not change NSAllowsArbitraryLoads to true, or you will risk app rejection! -->
-            <key>NSAllowsArbitraryLoads</key>
-            <false/>
-            <key>NSAllowsLocalNetworking</key>
-            <true/>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
 	</dict>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>App uses bluetooth to find, connect and communicate with Ledger Nano devices</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>App uses bluetooth to find, connect and communicate with Ledger Nano devices</string>
 	<key>NSCameraUsageDescription</key>
-	<string>App uses camera to scan address, extension, and WalletConnect QR code</string>
+	<string>$(PRODUCT_NAME) uses camera for uploading images</string>
 	<key>NSFaceIDUsageDescription</key>
 	<string>App uses Face ID to unlock wallet</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses photo library for uploading images</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>$(PRODUCT_NAME) uses photo library for uploading images</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Inter-Black.ttf</string>
@@ -94,13 +99,5 @@
 		<key>apiKey</key>
 		<string>fba0f81f121c1a15f7195bb269428911</string>
 	</dict>
-	<key>ITSAppUsesNonExemptEncryption</key>
-    <false/>
-	<key>NSCameraUsageDescription</key>
-    <string>$(PRODUCT_NAME) uses camera for uploading images</string>
-    <key>NSPhotoLibraryAddUsageDescription</key>
-    <string>$(PRODUCT_NAME) uses photo library for uploading images</string>
-    <key>NSPhotoLibraryUsageDescription</key>
-    <string>$(PRODUCT_NAME) uses photo library for uploading images</string>
 </dict>
 </plist>

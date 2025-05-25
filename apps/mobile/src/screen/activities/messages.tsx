@@ -115,6 +115,14 @@ export const RenderMessages: FunctionComponent<{
                   return null;
                 }
 
+                console.log(
+                  "info",
+                  `${msg.msg.height}/${msg.msg.msgIndex}/${msg.msg.relation}`,
+                  msg.msg,
+                  msg.prices,
+                  denom
+                )
+
                 return (
                   <MsgItemRender
                     key={`${msg.msg.height}/${msg.msg.msgIndex}/${msg.msg.relation}`}

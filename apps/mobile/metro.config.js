@@ -7,7 +7,7 @@ const fs = require('fs');
 
 const currentPath = __dirname;
 const rootPath = (() => {
-  const i = currentPath.lastIndexOf('\\apps\\mobile');
+  const i = currentPath.lastIndexOf('/apps/mobile');
   if (i < 0) {
     throw new Error('Could not find apps/mobile in path');
   }

@@ -239,7 +239,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
       // 일단 swap-1로 설정한다.
       if (
         ibcSwapConfigs.amountConfig.chainInfo.chainIdentifier ===
-        chainStore.getChain(skipQueriesStore.queryIBCSwap.swapVenue.chainId)
+        chainStore.getChain(skipQueriesStore.queryIBCSwap.swapVenues[0].chainId)
           .chainIdentifier
       ) {
         type = 'swap-1';
@@ -253,7 +253,7 @@ export const IBCSwapScreen: FunctionComponent = observer(() => {
           const firstOperation = queryRoute.response.data.operations[0];
           if ('swap' in firstOperation) {
             if ('swap_in' in firstOperation.swap) {
-              type = `swap-${firstOperation.swap.swap_in.swap_operations.length}`;
+              type = `swap-${firstOperation.swap.swap_in?.swap_operations.length}`;
             }
           }
         }
